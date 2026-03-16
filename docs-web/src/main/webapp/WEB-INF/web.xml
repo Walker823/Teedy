@@ -7,6 +7,10 @@
          metadata-complete="true">
   <display-name>Teedy</display-name>
   
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
   <!-- Proper loader/unloader of ImageIO plugins -->
   <listener>
     <display-name>ImageIO service provider loader/unloader</display-name>
