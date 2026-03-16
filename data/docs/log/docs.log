@@ -492,3 +492,38 @@ select c1_0.CFG_ID_C,c1_0.CFG_VALUE_C from T_CONFIG c1_0 where c1_0.CFG_ID_C=? [
 09 Mar 2026 15:04:50,835 INFO com.sismics.docs.core.listener.async.DocumentUpdatedAsyncListener.on(DocumentUpdatedAsyncListener.java:39) Document updated event: DocumentUpdatedAsyncEvent{documentId=bec73d69-55db-4c2a-a869-00fbd05dd4eb} 
 09 Mar 2026 15:47:40,653 INFO com.sismics.docs.core.service.InboxService.shutDown(InboxService.java:57) Inbox service shutting down 
 09 Mar 2026 15:47:40,657 INFO com.sismics.docs.core.service.FileService.shutDown(FileService.java:44) File service shutting down 
+16 Mar 2026 15:06:42,908 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:87) Configuring EntityManager from environment parameters 
+16 Mar 2026 15:06:42,947 WARN com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:92) Using an embedded H2 database. Only suitable for testing purpose, not for production! 
+16 Mar 2026 15:06:47,982 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:57) Opening database and executing incremental updates 
+16 Mar 2026 15:06:48,016 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:106) Found database version 31, new version is 31, executing database incremental update scripts 
+16 Mar 2026 15:06:48,017 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:108) Database upgrade complete 
+16 Mar 2026 15:06:48,021 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:87) Configuring EntityManager from environment parameters 
+16 Mar 2026 15:06:48,022 WARN com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:92) Using an embedded H2 database. Only suitable for testing purpose, not for production! 
+16 Mar 2026 15:07:04,500 INFO com.sismics.util.ClasspathScanner.findClasses(ClasspathScanner.java:48) Found 1 classes for IndexingHandler 
+16 Mar 2026 15:07:04,955 INFO com.sismics.docs.core.util.indexing.LuceneIndexingHandler.initLucene(LuceneIndexingHandler.java:129) Using RAM Lucene storage 
+16 Mar 2026 15:07:05,751 INFO com.sismics.docs.core.service.FileService.startUp(FileService.java:39) File service starting up 
+16 Mar 2026 15:07:05,790 INFO com.sismics.docs.core.service.InboxService.startUp(InboxService.java:52) Inbox service starting up 
+16 Mar 2026 15:07:05,797 INFO com.sismics.docs.core.service.FileSizeService.startUp(FileSizeService.java:30) File size service starting up 
+16 Mar 2026 15:07:06,853 INFO com.sismics.docs.core.service.FileSizeService.lambda$runOneIteration$0(FileSizeService.java:50) No more file to process, stopping the service 
+16 Mar 2026 15:07:06,859 INFO com.sismics.docs.core.service.FileSizeService.shutDown(FileSizeService.java:35) File size service shutting down 
+16 Mar 2026 15:07:53,892 INFO com.sismics.util.ClasspathScanner.findClasses(ClasspathScanner.java:48) Found 2 classes for AuthenticationHandler 
+16 Mar 2026 15:08:01,869 INFO com.sismics.docs.core.service.InboxService.shutDown(InboxService.java:57) Inbox service shutting down 
+16 Mar 2026 15:08:01,871 INFO com.sismics.docs.core.service.FileService.shutDown(FileService.java:44) File service shutting down 
+16 Mar 2026 15:17:19,503 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:87) Configuring EntityManager from environment parameters 
+16 Mar 2026 15:17:19,545 WARN com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:92) Using an embedded H2 database. Only suitable for testing purpose, not for production! 
+16 Mar 2026 15:17:24,390 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:57) Opening database and executing incremental updates 
+16 Mar 2026 15:17:24,424 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:106) Found database version 31, new version is 32, executing database incremental update scripts 
+16 Mar 2026 15:17:24,452 INFO com.sismics.util.jpa.DbOpenHelper.executeAllScript(DbOpenHelper.java:142) Executing script: dbupdate-032-0.sql 
+16 Mar 2026 15:17:24,503 INFO com.sismics.util.jpa.DbOpenHelper.open(DbOpenHelper.java:108) Database upgrade complete 
+16 Mar 2026 15:17:24,506 INFO com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:87) Configuring EntityManager from environment parameters 
+16 Mar 2026 15:17:24,507 WARN com.sismics.util.jpa.EMF.getEntityManagerProperties(EMF.java:92) Using an embedded H2 database. Only suitable for testing purpose, not for production! 
+16 Mar 2026 15:17:40,565 INFO com.sismics.util.ClasspathScanner.findClasses(ClasspathScanner.java:48) Found 1 classes for IndexingHandler 
+16 Mar 2026 15:17:41,069 INFO com.sismics.docs.core.util.indexing.LuceneIndexingHandler.initLucene(LuceneIndexingHandler.java:129) Using RAM Lucene storage 
+16 Mar 2026 15:17:41,992 INFO com.sismics.docs.core.service.FileService.startUp(FileService.java:39) File service starting up 
+16 Mar 2026 15:17:42,034 INFO com.sismics.docs.core.service.InboxService.startUp(InboxService.java:52) Inbox service starting up 
+16 Mar 2026 15:17:42,041 INFO com.sismics.docs.core.service.FileSizeService.startUp(FileSizeService.java:30) File size service starting up 
+16 Mar 2026 15:17:43,114 INFO com.sismics.docs.core.service.FileSizeService.lambda$runOneIteration$0(FileSizeService.java:50) No more file to process, stopping the service 
+16 Mar 2026 15:17:43,123 INFO com.sismics.docs.core.service.FileSizeService.shutDown(FileSizeService.java:35) File size service shutting down 
+16 Mar 2026 15:18:24,418 INFO com.sismics.util.ClasspathScanner.findClasses(ClasspathScanner.java:48) Found 2 classes for AuthenticationHandler 
+16 Mar 2026 15:18:38,866 INFO com.sismics.docs.core.service.InboxService.shutDown(InboxService.java:57) Inbox service shutting down 
+16 Mar 2026 15:18:38,867 INFO com.sismics.docs.core.service.FileService.shutDown(FileService.java:44) File service shutting down 
