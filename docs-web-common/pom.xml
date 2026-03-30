@@ -130,4 +130,8 @@
       </plugin>
     </plugins>
   </build>
+
+  <reporting>
+    <outputDirectory>${project.basedir}/../target/site/${project.artifactId}</outputDirectory>
+  </reporting>
 </project>
