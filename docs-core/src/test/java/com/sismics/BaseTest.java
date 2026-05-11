@@ -2,6 +2,7 @@ package com.sismics;
 
 import java.io.InputStream;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 
 public abstract class BaseTest {
 
@@ -45,5 +46,32 @@ public abstract class BaseTest {
 
     protected static InputStream getSystemResourceAsStream(String fileName) {
         return ClassLoader.getSystemResourceAsStream("file/" + fileName);
+    }
+
+    protected static boolean hasTesseractLanguage(String language) {
+        ProcessBuilder processBuilder = new ProcessBuilder("tesseract", "--list-langs");
+        processBuilder.redirectErrorStream(true);
+        try {
+            Process process = processBuilder.start();
+            String output;
+            try (InputStream inputStream = process.getInputStream()) {
+                output = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
+            }
+            if (process.waitFor() != 0) {
+                return false;
+            }
+            if (language == null || language.trim().isEmpty()) {
+                return true;
+            }
+            String[] lines = output.split("\\R");
+            for (String line : lines) {
+                if (language.equals(line.trim())) {
+                    return true;
+                }
+            }
+            return false;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }

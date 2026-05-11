@@ -9,6 +9,7 @@ import com.sismics.docs.core.util.format.*;
 import com.sismics.util.mime.MimeType;
 import com.sismics.util.mime.MimeTypeUtil;
 import org.junit.Assert;
+import org.junit.Assume;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -67,6 +68,7 @@ public class TestFileUtil extends BaseTest {
 
     @Test
     public void extractContentScannedPdf() throws Exception {
+        Assume.assumeTrue("tesseract with eng language is required", hasTesseractLanguage("eng"));
         Path path = Paths.get(getResource("scanned.pdf").toURI());
         FormatHandler formatHandler = FormatHandlerUtil.find(MimeTypeUtil.guessMimeType(path, FILE_PDF_SCANNED));
         Assert.assertNotNull(formatHandler);

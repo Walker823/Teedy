@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URLConnection;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Locale;
 
 /**
  * Utility to check MIME types.
@@ -28,6 +29,11 @@ public class MimeTypeUtil {
 
         if (mimeType == null) {
             return MimeType.DEFAULT;
+        }
+
+        if (name != null && name.toLowerCase(Locale.ROOT).endsWith(".csv")
+                && "application/vnd.ms-excel".equalsIgnoreCase(mimeType)) {
+            return MimeType.TEXT_CSV;
         }
 
         return mimeType;
