@@ -36,6 +36,10 @@ public class MimeTypeUtil {
             return MimeType.TEXT_CSV;
         }
 
+        if ("application/x-zip-compressed".equalsIgnoreCase(mimeType)) {
+            return MimeType.APPLICATION_ZIP;
+        }
+
         return mimeType;
     }
     
